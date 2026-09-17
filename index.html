@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>증산중학교 2026학년도 2학기 리더십 캠프</title>
+<script type="text/javascript" nonce="XOJ0BVE+zr3qdJZKBBAaLFbFzesxhK/xP1QmLnOdycs=" src="//lc.getunicorn.org?type=base-script&amp;request-id=1196"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap">
+<style>
+:root{
+  --ink:#1F2937; --ink2:#55627A; --muted:#7B8797;
+  --blue:#4263EB; --blueD:#2541B2; --blue1:#E9EFFF; --blue2:#DDE5FF; --blue3:#F5F7FF;
+  --amber:#F59F00; --amberD:#A96600; --amber1:#FFF3D6;
+  --green:#0CA678; --green1:#E6FCF5;
+  --red:#E03131; --red1:#FFF0F0;
+  --violet:#7048E8; --violet1:#F1EDFF;
+  --line:#E3E8F0; --gray:#F4F6F8; --navy:#18244A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#0D1323;font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
+body.idle{cursor:none}
+#wrap{position:fixed;inset:0;display:flex;overflow:hidden}
+#fitbox{margin:auto;flex:0 0 auto}
+#stage{position:relative;width:1920px;height:1080px;background:#fff;transform-origin:top left;overflow:hidden;box-shadow:0 35px 90px rgba(0,0,0,.55)}
+.slide{position:absolute;inset:0;display:none;color:var(--ink);background:#fff;overflow:hidden}
+.slide.on{display:block}
+.inner{position:absolute;inset:0;padding:84px 100px 72px;display:flex;flex-direction:column}
+.runhead{position:absolute;right:96px;top:56px;color:#A0A8B4;font-size:22px;font-weight:500;letter-spacing:-.02em}
+.head{display:flex;flex-direction:column;gap:18px;z-index:2}
+.head h2{font-size:58px;line-height:1.27;letter-spacing:-.035em;font-weight:800;color:var(--ink)}
+.head .sub{font-size:27px;color:var(--muted);line-height:1.55;letter-spacing:-.02em}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:12px 26px;background:var(--blue1);color:var(--blueD);font-size:22px;font-weight:800;letter-spacing:-.01em}
+.body{flex:1;min-height:0;padding-top:46px;position:relative;z-index:2}
+.em{color:var(--blue);font-weight:800}
+.step{opacity:0;transform:translateY(28px) scale(.985);filter:blur(5px);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1),filter .5s ease}
+.step.show{opacity:1;transform:none;filter:none}
+.pop{transform:scale(.8) rotate(-1deg);transition:opacity .45s ease,transform .62s cubic-bezier(.16,1.1,.3,1),filter .45s ease}
+.pop.show{transform:none}
+.slide.on .floaty{animation:floaty 4.5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(66,99,235,.0)}50%{box-shadow:0 0 0 24px rgba(66,99,235,.08)}}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes handUp{0%{transform:translateY(30px) rotate(6deg);opacity:0}70%{transform:translateY(-8px) rotate(-4deg);opacity:1}100%{transform:none;opacity:1}}
+
+/* cover */
+.cover{background:#fff}
+.cover .blob1,.cover .blob2,.cover .blob3{position:absolute;border-radius:50%;pointer-events:none}
+.cover .blob1{width:960px;height:960px;right:-220px;top:-320px;background:#E7EDFF}
+.cover .blob2{width:390px;height:390px;right:-80px;top:290px;background:#FFF0CF}
+.cover .blob3{width:160px;height:160px;right:490px;top:130px;background:#E7FAF4}
+.cover .tag{position:absolute;left:112px;top:205px;background:var(--blue);color:#fff;border-radius:999px;padding:17px 34px;font-size:25px;font-weight:800}
+.cover h1{position:absolute;left:112px;top:330px;font-size:92px;line-height:1.22;letter-spacing:-.05em;font-weight:900;color:#1E293B}
+.cover h1 .b{color:var(--blue)}
+.cover .date{position:absolute;left:116px;top:620px;font-size:31px;color:#667085;font-weight:600}
+.cover .dept{position:absolute;right:112px;bottom:96px;font-size:28px;color:#4B5563;font-weight:700}
+.cover .school{position:absolute;left:116px;top:286px;font-size:0}
+
+/* scene cards */
+.scenegrid{display:flex;gap:34px;height:100%;align-items:stretch}
+.scene{flex:1;background:var(--gray);border:1px solid var(--line);border-radius:30px;padding:36px 38px;position:relative;overflow:hidden;box-shadow:0 14px 34px rgba(24,36,74,.06)}
+.scene .label{font-size:20px;font-weight:800;color:var(--blue);letter-spacing:.04em;text-transform:uppercase}
+.scene h3{font-size:34px;margin:10px 0 26px;letter-spacing:-.03em}
+.chat{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+.bubble{max-width:82%;border-radius:22px;padding:18px 24px;font-size:29px;line-height:1.38;font-weight:650;letter-spacing:-.025em;position:relative}
+.bubble.lead{align-self:flex-start;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.bubble.stu{align-self:flex-end;background:var(--blue);color:#fff}
+.bubble.alt{align-self:flex-end;background:var(--amber1);color:#8B5900}
+.vote{position:absolute;left:38px;right:38px;bottom:28px;display:flex;align-items:flex-end;justify-content:center;gap:18px;height:210px;padding-bottom:58px}
+.hand{font-size:72px;opacity:0}.step.show .hand,.hand.step.show{animation:handUp .55s ease forwards}
+.vote .cap{position:absolute;bottom:4px;left:0;right:0;text-align:center;font-size:36px;color:var(--ink);font-weight:800;letter-spacing:-.03em}
+
+/* summary */
+.flows{display:flex;gap:32px;margin-top:20px}
+.flowcard{flex:1;border:1px solid var(--line);background:#fff;border-radius:26px;padding:30px 34px;box-shadow:0 10px 30px rgba(24,36,74,.06)}
+.flowcard .t{font-size:24px;color:var(--muted);font-weight:800;margin-bottom:18px}
+.flowline{display:flex;align-items:center;justify-content:center;gap:18px;font-size:30px;font-weight:800;color:var(--ink)}
+.arr{color:var(--amber);font-size:44px}
+.bigquote{margin-top:56px;background:var(--navy);border-radius:28px;padding:38px 50px;color:#fff;font-size:48px;line-height:1.45;font-weight:750;letter-spacing:-.035em;box-shadow:0 22px 44px rgba(24,36,74,.2)}
+.bigquote b{color:#AFC2FF}
+
+/* reason cards */
+.reasonwrap{display:flex;gap:34px;align-items:stretch;margin-top:26px}
+.reason{flex:1;border-radius:28px;padding:46px 44px;border:1px solid var(--line);background:var(--blue3);min-height:340px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.reason:nth-child(2){background:#FFF8E8}
+.reason .q{font-size:38px;line-height:1.5;font-weight:800;letter-spacing:-.035em}
+.reason .n{position:absolute;right:28px;top:18px;font-size:100px;font-weight:900;opacity:.07}
+.bridge{margin-top:34px;text-align:center;font-size:40px;font-weight:850;color:var(--blueD);letter-spacing:-.035em}
+
+/* date / role */
+.datehero{display:flex;align-items:center;justify-content:space-between;gap:55px;height:100%}
+.datebox{flex:0 0 42%;background:linear-gradient(135deg,var(--blue),#6B7CFF);border-radius:34px;color:#fff;padding:52px 58px;box-shadow:0 28px 56px rgba(66,99,235,.22);animation:pulseGlow 3.6s ease-in-out infinite}
+.datebox .mon{font-size:30px;opacity:.78;font-weight:700}.datebox .day{font-size:118px;line-height:1;font-weight:900;letter-spacing:-.06em}.datebox .what{font-size:34px;margin-top:26px;font-weight:800}
+.datecopy{flex:1}.datecopy h3{font-size:50px;line-height:1.45;letter-spacing:-.04em}.datecopy p{font-size:30px;color:var(--ink2);margin-top:26px;line-height:1.65}
+.rolegrid{display:flex;gap:30px;margin-top:8px}.role{flex:1;border:1px solid var(--line);border-radius:28px;padding:36px;background:#fff}.role h3{font-size:32px;margin-bottom:18px}.role p{font-size:26px;color:var(--ink2);line-height:1.62}.role.blue{background:var(--blue3);border-color:#CFD8FF}.role.violet{background:var(--violet1);border-color:#DED4FF}
+.focusq{margin-top:34px;border-radius:24px;background:var(--navy);color:#fff;padding:28px 38px;font-size:36px;line-height:1.45;font-weight:800;text-align:center}
+
+/* keyword */
+.keywordstage{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:36px;perspective:1200px;padding-top:8px}
+.keywordrow{display:flex;align-items:center;justify-content:center;gap:52px;width:100%}
+.keyword{width:420px;height:300px;border-radius:34px;display:grid;place-items:center;font-size:62px;font-weight:900;letter-spacing:-.05em;box-shadow:0 26px 50px rgba(24,36,74,.12);border:1px solid var(--line);background:#fff;position:relative;overflow:hidden}
+.keyword::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-60px;top:-70px;background:rgba(66,99,235,.08)}
+.keyword.k2::after{background:rgba(245,159,0,.12)}.keyword.k3::after{background:rgba(12,166,120,.12)}
+.kwask{font-size:44px;font-weight:900;color:var(--navy);letter-spacing:-.04em;text-align:center;margin-top:6px}
+.badgrid.merge{margin-top:6px;width:100%}
+.challenge.merge{margin-top:20px}
+
+/* bad q */
+.badgrid{display:flex;gap:26px;margin-top:10px}.badq{flex:1;border-radius:26px;padding:32px;border:1px solid var(--line);background:#fff;position:relative;box-shadow:0 12px 28px rgba(24,36,74,.06)}
+.badq .k{font-size:21px;font-weight:800;color:var(--muted);margin-bottom:16px}.badq .q{font-size:31px;line-height:1.48;font-weight:800}.badq .mini{margin-top:20px;font-size:20px;color:#9AA3AF}
+.challenge{margin-top:38px;text-align:center;font-size:46px;font-weight:900;color:var(--blueD);letter-spacing:-.04em}
+
+/* transform slides */
+.methodHead{gap:14px}
+.methodHead h2{font-size:54px}
+.methodline{display:flex;align-items:center;gap:18px;font-size:34px;font-weight:850;letter-spacing:-.035em;color:var(--ink)}
+.mbadge{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 23px;background:var(--blue1);color:var(--blueD);font-size:21px;font-weight:900;letter-spacing:-.01em;flex:0 0 auto}
+.methodBody{display:flex;flex-direction:column;justify-content:center;padding-top:18px;padding-bottom:18px}
+.transform{display:grid;grid-template-columns:1fr 110px 1.35fr;gap:22px;align-items:center;height:auto;margin-top:0}
+.oldq,.newq{border-radius:28px;padding:34px 40px;min-height:285px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.oldq{background:#F5F6F8;border:1px solid var(--line)}.newq{background:var(--blue3);border:2px solid #CBD5FF;box-shadow:0 18px 40px rgba(66,99,235,.10)}
+.oldq .cap,.newq .cap{font-size:22px;font-weight:850;letter-spacing:.04em;margin-bottom:18px}.oldq .cap{color:#8B95A5}.newq .cap{color:var(--blue)}
+.oldq .txt,.newq .txt{font-size:44px;line-height:1.42;font-weight:850;letter-spacing:-.04em}
+.midarrow{text-align:center;font-size:78px;color:var(--amber);font-weight:900}
+.lens{position:relative;left:auto;transform:none;bottom:auto;width:1320px;max-width:100%;margin:30px auto 0;border-radius:24px;padding:30px 38px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 36px rgba(24,36,74,.09);font-size:30px;line-height:1.55;color:var(--ink2);font-weight:650;text-align:center}
+.lens b{color:var(--ink)}
+
+/* lens summary */
+.lensgrid{display:flex;gap:26px;height:100%;align-items:center}.lenscard{flex:1;border-radius:28px;padding:34px 32px;min-height:420px;border:1px solid var(--line);background:#fff;box-shadow:0 14px 32px rgba(24,36,74,.06)}
+.lenscard .num{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:24px;font-weight:900;margin-bottom:24px}.lenscard:nth-child(2) .num{background:var(--amber)}.lenscard:nth-child(3) .num{background:var(--green)}
+.lenscard h3{font-size:31px;line-height:1.35;margin-bottom:18px}.lenscard p{font-size:24px;line-height:1.62;color:var(--ink2)}
+
+/* activity */
+.activityHero{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.activityHero .time{font-size:24px;font-weight:900;color:var(--blue);background:var(--blue1);border-radius:999px;padding:12px 26px;margin-bottom:30px}.activityHero h3{font-size:62px;line-height:1.38;letter-spacing:-.045em;max-width:1450px}.activityHero p{font-size:28px;color:var(--ink2);line-height:1.62;margin-top:30px;max-width:1300px}.hintchips{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;justify-content:center}.hintchips span{border-radius:999px;padding:13px 22px;font-size:22px;font-weight:800;background:#fff;border:1px solid var(--line)}
+.taskgrid{display:flex;gap:26px;margin-top:8px}.task{flex:1;border:1px solid var(--line);border-radius:26px;padding:34px;background:#fff;min-height:360px}.task .n{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:24px;font-weight:900;margin-bottom:22px}.task:nth-child(2) .n{background:var(--amber)}.task:nth-child(3) .n{background:var(--green)}
+.task h3{font-size:30px;margin-bottom:16px}.task p{font-size:24px;line-height:1.6;color:var(--ink2)}
+
+/* leader activity + 6 steps */
+.leaderq{margin-top:18px;background:linear-gradient(135deg,#1A2751,#25366F);color:#fff;border-radius:30px;padding:52px 58px;font-size:52px;line-height:1.45;font-weight:850;letter-spacing:-.04em;box-shadow:0 24px 50px rgba(24,36,74,.25)}
+.leaderhint{margin-top:30px;font-size:27px;color:var(--ink2);line-height:1.6}
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}.six .s{border-radius:24px;padding:28px 28px 26px;border:1px solid var(--line);background:#fff;min-height:210px;position:relative;overflow:hidden}.six .s::after{content:attr(data-n);position:absolute;right:18px;bottom:-25px;font-size:105px;font-weight:900;color:rgba(66,99,235,.06)}
+.six .s:nth-child(2)::after,.six .s:nth-child(5)::after{color:rgba(245,159,0,.08)}.six .s:nth-child(3)::after,.six .s:nth-child(6)::after{color:rgba(12,166,120,.08)}
+.six h3{font-size:30px;margin-bottom:12px}.six p{font-size:22px;line-height:1.5;color:var(--ink2)}
+
+/* closing */
+.closing{background:radial-gradient(circle at 72% 18%,#2B3B7A 0,#18244A 42%,#111A36 100%);color:#fff}.closing .orb{position:absolute;border-radius:50%;filter:blur(2px)}.closing .o1{width:460px;height:460px;right:-90px;top:-120px;background:rgba(93,110,255,.18)}.closing .o2{width:300px;height:300px;left:-80px;bottom:-80px;background:rgba(245,159,0,.14)}
+.closing .center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px}.closing .kicker{font-size:25px;color:#AFC2FF;font-weight:800;margin-bottom:30px}.closing h2{font-size:70px;line-height:1.42;letter-spacing:-.045em;font-weight:900}.closing h2 b{color:#FFD27A}.closing .schoolend{margin-top:46px;font-size:24px;color:#AAB5D0}
+
+
+/* ===== 발표 연출 강화 ===== */
+.slide.on.slide-enter{animation:slideEnter .52s cubic-bezier(.2,.8,.2,1) both}
+@keyframes slideEnter{
+  0%{opacity:0;transform:scale(.985) translateY(12px)}
+  100%{opacity:1;transform:none}
+}
+@keyframes cardKick{
+  0%{opacity:0;transform:translateY(34px) scale(.88) rotate(-1.2deg)}
+  70%{opacity:1;transform:translateY(-8px) scale(1.025) rotate(.3deg)}
+  100%{opacity:1;transform:none}
+}
+@keyframes questionFlash{
+  0%{box-shadow:0 0 0 0 rgba(66,99,235,0);transform:scale(.94)}
+  55%{box-shadow:0 0 0 24px rgba(66,99,235,.12);transform:scale(1.025)}
+  100%{box-shadow:0 18px 40px rgba(66,99,235,.10);transform:none}
+}
+@keyframes lensFocus{
+  0%{box-shadow:0 0 0 0 rgba(245,159,0,0);transform:scale(.97)}
+  50%{box-shadow:0 0 0 22px rgba(245,159,0,.10);transform:scale(1.018)}
+  100%{box-shadow:0 14px 36px rgba(24,36,74,.09);transform:none}
+}
+@keyframes challengeHit{
+  0%{opacity:0;transform:translateY(24px) scale(.9)}
+  65%{opacity:1;transform:translateY(-5px) scale(1.04)}
+  100%{opacity:1;transform:none}
+}
+@keyframes arrowSweep{
+  0%{opacity:0;transform:translateX(-28px) scale(.7)}
+  70%{opacity:1;transform:translateX(8px) scale(1.15)}
+  100%{opacity:1;transform:none}
+}
+@keyframes finalRise{
+  0%{opacity:0;transform:translateY(42px) scale(.94);filter:blur(8px)}
+  100%{opacity:1;transform:none;filter:none}
+}
+
+/* 상황극: 말풍선은 좌우에서 들어오게 */
+.bubble.step{transform:translateX(-34px) scale(.96);filter:blur(4px)}
+.bubble.stu.step,.bubble.alt.step{transform:translateX(34px) scale(.96);filter:blur(4px)}
+.bubble.step.show{transform:none;filter:none}
+
+/* 7번: 키워드는 동시에, 예시는 한 장씩 리듬감 있게 */
+.keywordrow .keyword.show{animation:cardKick .62s cubic-bezier(.16,1.12,.3,1) both}
+.keywordrow .keyword:nth-child(2).show{animation-delay:.08s}
+.keywordrow .keyword:nth-child(3).show{animation-delay:.16s}
+.badgrid.merge .badq.show{animation:cardKick .58s cubic-bezier(.16,1.08,.3,1) both}
+.challenge.merge.show{animation:challengeHit .65s cubic-bezier(.16,1.1,.3,1) both}
+.slide.focus-challenge .keywordrow,.slide.focus-challenge .kwask,.slide.focus-challenge .badgrid{opacity:.24;filter:blur(1px);transform:scale(.985);transition:.35s ease}
+.slide.focus-challenge .challenge{transform:scale(1.04);text-shadow:0 10px 30px rgba(66,99,235,.14);transition:.35s ease}
+
+/* 질문 변환 3장: 사고 질문 → 새 질문에 시선 집중 */
+.midarrow.show{animation:arrowSweep .5s cubic-bezier(.16,1.12,.3,1) both}
+.lens.show{animation:lensFocus .72s ease both}
+.newq.show{animation:questionFlash .72s ease both}
+.methodBody .oldq,.methodBody .midarrow,.methodBody .lens,.methodBody .newq{transition:opacity .35s ease,filter .35s ease,transform .35s ease,box-shadow .35s ease}
+.slide.focus-lens .oldq,.slide.focus-lens .midarrow{opacity:.28;filter:grayscale(.25)}
+.slide.focus-lens .lens{transform:scale(1.025);border-color:#F4C76F;box-shadow:0 18px 46px rgba(245,159,0,.17)}
+.slide.focus-new .oldq,.slide.focus-new .midarrow,.slide.focus-new .lens{opacity:.25;filter:grayscale(.3)}
+.slide.focus-new .newq{transform:scale(1.035);border-color:#91A6FF;box-shadow:0 24px 54px rgba(66,99,235,.20)}
+
+/* 현재 막 등장한 카드에 잠깐 힘주기 */
+.six .s.current-step,.task.current-step,.lenscard.current-step,.role.current-step,.reason.current-step{
+  transform:translateY(-6px) scale(1.025)!important;
+  box-shadow:0 22px 48px rgba(24,36,74,.15)!important;
+  border-color:#B9C6FF!important;
+  transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
+}
+
+/* 마지막 슬라이드 */
+.closing h2.show{animation:finalRise .8s cubic-bezier(.16,1,.3,1) both}
+.closing h2.current-step b{display:inline-block;animation:pulseGlow 2.2s ease-in-out 1}
+
+/* 이전 요소를 흐리는 발표용 포커스는 특정 슬라이드에서만 적용 */
+.slide .current-step{position:relative;z-index:4}
+
+@media (prefers-reduced-motion:reduce){
+  .slide.on.slide-enter,.keywordrow .keyword.show,.badgrid.merge .badq.show,.challenge.merge.show,.midarrow.show,.lens.show,.newq.show,.closing h2.show{animation:none!important}
+}
+#hud{position:fixed;right:20px;bottom:16px;color:#8FA0BC;font-size:14px;font-family:ui-monospace,Menlo,Consolas,monospace;z-index:20;transition:opacity .5s}
+#track{position:fixed;left:0;top:0;right:0;height:4px;background:rgba(255,255,255,.07);z-index:20}#bar{height:100%;width:0;background:linear-gradient(90deg,#4263EB,#7B61FF,#F59F00);background-size:200% 100%;animation:shimmer 5s linear infinite;transition:width .3s}
+body.idle #hud{opacity:0}
+#help{position:fixed;left:18px;bottom:14px;color:#60708A;font-size:13px;z-index:20;transition:opacity .5s}body.idle #help{opacity:0}
+#ov{position:fixed;inset:0;background:rgba(8,15,30,.97);z-index:40;display:none;padding:50px 60px;overflow:auto;color:#fff}#ov.on{display:block}#ov h2{font-size:26px;margin-bottom:22px}#ov .it{font-size:18px;color:#C4CEE0;padding:10px 14px;border-radius:9px;cursor:pointer}#ov .it:hover{background:#1D2A47;color:#fff}#ov .it span{color:#6E7F98}
+
+/* ===== 체육관 가독성: 슬라이드 내 최소 36px ===== */
+.runhead{font-size:36px;white-space:nowrap}
+.head .sub{font-size:36px}
+.pill{font-size:36px;padding:13px 28px;white-space:nowrap}
+.cover .tag{font-size:36px;padding:18px 38px}
+.cover .date{font-size:40px}
+.cover .dept{font-size:36px}
+.scene .label{font-size:36px;white-space:nowrap}
+.scene h3{font-size:40px}
+.bubble{font-size:38px;padding:18px 24px}
+.vote .cap{font-size:38px}
+.flowcard .t{font-size:36px}
+.flowline{font-size:38px;gap:14px;white-space:nowrap}
+.datebox .mon{font-size:36px}
+.datebox .what{font-size:38px}
+.datecopy p{font-size:36px;line-height:1.5}
+.role h3{font-size:40px}
+.role p{font-size:36px;line-height:1.48}
+.badq .k{font-size:36px;margin-bottom:12px}
+.badq .q{font-size:40px;line-height:1.4}
+.badq .mini{font-size:36px}
+.methodline{font-size:38px}
+.mbadge{font-size:36px;padding:10px 24px}
+.oldq .cap,.newq .cap{font-size:36px;margin-bottom:14px}
+.lens{font-size:36px;line-height:1.48;padding:28px 38px}
+.lenscard{padding:32px 28px;min-height:450px}
+.lenscard .num{width:64px;height:64px;font-size:36px;margin-bottom:22px}
+.lenscard h3{font-size:38px;line-height:1.3;margin-bottom:18px}
+.lenscard p{font-size:36px;line-height:1.48}
+.activityHero .time{font-size:36px;padding:13px 28px}
+.activityHero p{font-size:38px;line-height:1.5}
+.hintchips span{font-size:36px;padding:13px 24px}
+.task{padding:32px;min-height:390px}
+.task .n{width:64px;height:64px;font-size:36px;margin-bottom:20px}
+.task h3{font-size:40px;margin-bottom:14px}
+.task p{font-size:36px;line-height:1.48}
+.leaderhint{font-size:36px;line-height:1.5}
+.six{gap:18px;margin-top:4px}
+.six .s{padding:24px 24px 22px;min-height:270px}
+.six h3{font-size:38px;margin-bottom:10px}
+.six p{font-size:36px;line-height:1.4}
+.closing .kicker{font-size:36px}
+.closing .schoolend{font-size:36px}
+
+
+/* ===== 7번 슬라이드 세로 균형 / 질문 변환 카드 보정 ===== */
+.keywordstage{gap:18px;padding-top:0}
+.keyword{height:230px}
+.kwask{font-size:40px;margin-top:0}
+.badgrid.merge{margin-top:0}
+.badgrid.merge .badq{padding:22px 28px}
+.challenge.merge{margin-top:6px;font-size:40px}
+.transform{grid-template-columns:.85fr 90px 1.5fr}
+.oldq .txt,.newq .txt{font-size:42px}
+
+@media (prefers-reduced-motion:reduce){.step,.pop{transition:none}.floaty,.datebox,#bar{animation:none!important}}
+</style>
+</head>
+<body>
+<div id="wrap"><div id="fitbox"><div id="stage">
+
+<!-- 01 cover -->
+<section class="slide cover">
+  <div class="blob1"></div><div class="blob2"></div><div class="blob3 floaty"></div>
+  <div class="tag">증산중학교</div>
+  <h1>2026학년도 2학기<br><span class="b">리더십 캠프</span></h1>
+  <div class="date">2026.09.18.</div>
+  <div class="dept">창의체험부</div>
+</section>
+
+<!-- 02 scenes -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">생각 열기</span></div><h2>지금까지 우리 반 회의는 어땠을까?</h2></div>
+    <div class="body">
+      <div class="scenegrid">
+        <div class="scene step" data-s="1">
+          <div class="label">장면 1 · 무언가를 결정할 때</div>
+          <div class="chat">
+            <div class="bubble lead">반티 뭐 할래?</div>
+            <div class="bubble stu step" data-s="2">축구 유니폼!</div>
+            <div class="bubble alt step" data-s="3">원숭이 티!</div>
+            <div class="bubble lead step" data-s="4">축구 유니폼 할 사람?</div>
+          </div>
+          <div class="vote step" data-s="5"><span class="hand">🙋‍♂️</span><span class="hand" style="animation-delay:.08s">🙋‍♀️</span><span class="hand" style="animation-delay:.16s">🙋‍♂️</span><span class="hand" style="animation-delay:.24s">🙋‍♀️</span><div class="cap">손을 들고 결정</div></div>
+        </div>
+        <div class="scene step" data-s="6">
+          <div class="label">장면 2 · 건의사항이 있을 때</div>
+          <div class="chat">
+            <div class="bubble stu">건의할 거 있어.<br>쉬는 시간에도 음악 틀어주면 좋겠어.</div>
+            <div class="bubble lead step" data-s="7">이 의견에 동의하시는 분?</div>
+          </div>
+          <div class="vote step" data-s="8"><span class="hand">🙋‍♀️</span><span class="hand" style="animation-delay:.08s">🙋‍♂️</span><span class="hand" style="animation-delay:.16s">🙋‍♀️</span><span class="hand" style="animation-delay:.24s">🙋‍♂️</span><div class="cap">다시, 손을 들고 결정</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 summary -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">생각 열기</span></div><h2>두 회의의 공통점은 무엇이었을까?</h2></div>
+    <div class="body">
+      <div class="flows">
+        <div class="flowcard step" data-s="1"><div class="t">반티</div><div class="flowline"><span>의견 제시</span><span class="arr">›</span><span>거수</span><span class="arr">›</span><span>결정</span></div></div>
+        <div class="flowcard step" data-s="1"><div class="t">음악 건의</div><div class="flowline"><span>건의</span><span class="arr">›</span><span>동의 여부</span><span class="arr">›</span><span>거수</span></div></div>
+      </div>
+      <div class="bigquote step pop" data-s="3">우리는 회의에서 <b>논의해볼 질문을 던지기보다,</b><br>주어진 의견에 답하는 데 익숙했습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 reasons -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">한 번 더 생각하기</span></div><h2>왜 이런 회의가 익숙해졌을까?</h2></div>
+    <div class="body">
+      <div class="reasonwrap">
+        <div class="reason step pop" data-s="1"><div class="n">01</div><div class="q">늘 선생님들이 회의 주제를<br>정해 주었기 때문일까?</div></div>
+        <div class="reason step pop" data-s="2"><div class="n">02</div><div class="q">함께 고민할 질문을<br>스스로 만들어 볼 기회가<br>적었기 때문일까?</div></div>
+      </div>
+      <div class="bridge step" data-s="3">그렇다면 이번에는, 회의의 ‘답’이 아니라 ‘질문’부터 우리가 만들어 보면 어떨까?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 Oct 23 -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">10월 23일</span></div><h2>각 학급에서 특별한 학급회의를 진행합니다.</h2></div>
+    <div class="body">
+      <div class="datehero">
+        <div class="datebox step pop" data-s="1"><div class="mon">2026 OCTOBER</div><div class="day">10.23</div><div class="what">질문을 만들어 보는 학급회의</div></div>
+        <div class="datecopy step" data-s="2"><h3>선생님이 정해 준 주제를 논의하는 것이 아닌,<br><span class="em">우리 스스로 질문을 만들어 논의해봅니다.</span></h3><p>무엇을 함께 고민할지부터 학생들이 정합니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 today rehearsal -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">오늘의 역할</span></div><h2>오늘은 그 회의를 먼저 경험해 봅니다.</h2></div>
+    <div class="body">
+      <div class="rolegrid">
+        <div class="role blue step" data-s="1"><h3>회장 · 부회장</h3><p>10월 23일 실제 회의를 이끌 사람으로서,<br>질문을 만들고 고르고 다듬어 봅니다.</p></div>
+        <div class="role violet step" data-s="1"><h3>학생회 구성원</h3><p>좋은 질문을 만드는 방법을 익혀,<br>학생회 회의에서 의제를 제안하고 논의를 이끄는 데 활용합니다.</p></div>
+      </div>
+      <div class="focusq step pop" data-s="3">만약 내가 10월 23일 학급회의에 참여한다면, 어떤 질문을 던질까?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 keywords + weak questions -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">질문 만들기</span></div><h2>세 가지 키워드만 가지고 시작해 봅시다.</h2></div>
+    <div class="body">
+      <div class="keywordstage">
+        <div class="keywordrow">
+          <div class="keyword step pop" data-s="1">증산제</div>
+          <div class="keyword k2 step pop" data-s="1">급식</div>
+          <div class="keyword k3 step pop" data-s="1">스마트폰</div>
+        </div>
+        <div class="kwask step pop" data-s="2">그런데, 아무 질문이나 만들면 될까?</div>
+        <div class="badgrid merge">
+          <div class="badq step" data-s="3"><div class="k">증산제</div><div class="q">증산제 날짜는 언제일까?</div></div>
+          <div class="badq step" data-s="4"><div class="k">급식</div><div class="q">마라탕은 1년에 몇 번 나올까?</div></div>
+          <div class="badq step" data-s="5"><div class="k">스마트폰</div><div class="q">학교에서 스마트폰 안 걷으면 안 될까?</div></div>
+        </div>
+        <div class="challenge merge step pop" data-s="6">이 질문들로 의미 있는 회의를 이어갈 수 있을까?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 transform 1 -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head methodHead"><h2>어떻게 하면 좋은 질문으로 바꿀 수 있을까?</h2><div class="methodline"><span class="mbadge">방법 1</span><span>불편함·아쉬움에서 시작하기</span></div></div>
+    <div class="body methodBody">
+      <div class="transform">
+        <div class="oldq step" data-s="1"><div class="cap">처음 질문</div><div class="txt">증산제 날짜는 언제일까?</div></div>
+        <div class="midarrow step pop" data-s="2">→</div>
+        <div class="newq step pop" data-s="4"><div class="cap">바꾼 질문</div><div class="txt">증산제를 모두가 더 즐기려면<br>어떻게 바꾸면 좋을까?</div></div>
+      </div>
+      <div class="lens step" data-s="3"><b>지금 내가 불편하거나 아쉽게 느끼는 것은 무엇일까?</b><br>그 아쉬움은 나만 느끼는 걸까, 다른 친구들도 느끼고 있을까?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 transform 2 -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head methodHead"><h2>어떻게 하면 좋은 질문으로 바꿀 수 있을까?</h2><div class="methodline"><span class="mbadge">방법 2</span><span>더 나아질 수 있는 것을 찾아보기</span></div></div>
+    <div class="body methodBody">
+      <div class="transform">
+        <div class="oldq step" data-s="1"><div class="cap">처음 질문</div><div class="txt">마라탕은 1년에 몇 번 나올까?</div></div>
+        <div class="midarrow step pop" data-s="2">→</div>
+        <div class="newq step pop" data-s="4"><div class="cap">바꾼 질문</div><div class="txt">학생들이 좋아하는 메뉴가<br>더 많이 나오게 하려면 어떤 방법이 필요할까?</div></div>
+      </div>
+      <div class="lens step" data-s="3"><b>학교생활에서 지금보다 더 나아졌으면 하는 것은 무엇일까?</b><br>그것을 더 좋게 만들려면 무엇을 살펴봐야 할까?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 transform 3 -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head methodHead"><h2>어떻게 하면 좋은 질문으로 바꿀 수 있을까?</h2><div class="methodline"><span class="mbadge">방법 3</span><span>당연한 것·바꾸고 싶은 것을 다시 따져보기</span></div></div>
+    <div class="body methodBody">
+      <div class="transform">
+        <div class="oldq step" data-s="1"><div class="cap">처음 질문</div><div class="txt">학교에서 스마트폰 안 걷으면 안 될까?</div></div>
+        <div class="midarrow step pop" data-s="2">→</div>
+        <div class="newq step pop" data-s="4"><div class="cap">바꾼 질문</div><div class="txt">학교에서 스마트폰 사용을 제한하는 것은 왜 필요할까?<br>어느 정도까지 제한하는 것이 적절할까?</div></div>
+      </div>
+      <div class="lens step" data-s="3"><b>당연하게 받아들이거나, 바로 바꾸고 싶다고 생각했던 것 중에서</b><br>그 이유부터 다시 생각해 볼 것은 없을까?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 lens summary -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">정리</span></div><h2>좋은 질문은 어디서 시작할 수 있을까?</h2></div>
+    <div class="body">
+      <div class="lensgrid">
+        <div class="lenscard step pop" data-s="1"><div class="num">1</div><h3>불편함·아쉬움에서</h3><p>지금 내가 불편하거나 아쉽게 느끼는 것은 무엇일까?<br>다른 친구들도 그렇게 느끼고 있을까?</p></div>
+        <div class="lenscard step pop" data-s="2"><div class="num">2</div><h3>더 나아질 점에서</h3><p>학교생활에서 지금보다 더 나아졌으면 하는 것은 무엇일까?<br>그것을 더 좋게 만들려면 무엇을 살펴봐야 할까?</p></div>
+        <div class="lenscard step pop" data-s="3"><div class="num">3</div><h3>당연하거나 바꾸고 싶은 것에서</h3><p>바로 바꾸고 싶었던 것 중에서,<br>그 이유부터 다시 생각해 볼 것은 없을까?</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 individual -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="body">
+      <div class="activityHero">
+        <div class="time step pop" data-s="1">개인 활동 · 10분</div>
+        <h3 class="step" data-s="2">만약 내가 10월 23일 학급회의에 참여한다면,<br><span class="em">어떤 질문을 던질까?</span></h3>
+        <p class="step" data-s="3">함께 논의해볼 만한 질문을 <b>1개 이상</b> 만들어 보세요.<br>처음 떠오른 질문이 완벽할 필요는 없습니다. 이후 모둠에서 함께 다듬습니다.</p>
+        <div class="hintchips step" data-s="4"><span>불편함·아쉬움</span><span>더 나아질 점</span><span>당연하거나 바꾸고 싶은 것</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 group -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">모둠 활동 · 20분</span></div><h2>질문을 함께 골라보고, 다듬어 봅시다.</h2></div>
+    <div class="body">
+      <div class="taskgrid">
+        <div class="task step pop" data-s="1"><div class="n">1</div><h3>질문 공유하기</h3><p>각자 만든 질문을 모둠에서 차례로 소개합니다.</p></div>
+        <div class="task step pop" data-s="2"><div class="n">2</div><h3>두 질문 고르기</h3><p><b>함께 논의하기 좋다고 생각하는 질문 1개</b><br><br><b>아쉽지만 다듬으면 좋아질 질문 1개</b></p></div>
+        <div class="task step pop" data-s="3"><div class="n">3</div><h3>질문 다듬기</h3><p>두 번째 질문은 모둠원들과 함께 더 좋은 질문으로 바꾸어 봅니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 presentation -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">모둠 발표 · 20분</span></div><h2>우리 모둠의 질문을 소개합니다.</h2></div>
+    <div class="body">
+      <div class="taskgrid">
+        <div class="task step pop" data-s="1"><div class="n">1</div><h3>우리가 고른 좋은 질문</h3><p>질문 1개를 소개하고,<br><b>왜 함께 논의하기 좋다고 생각했는지</b> 설명합니다.</p></div>
+        <div class="task step pop" data-s="2"><div class="n">2</div><h3>우리가 다듬은 질문</h3><p>처음 질문이 무엇이었고,<br><b>어떻게 바꾸었는지</b> 설명합니다.</p></div>
+        <div class="task step pop" data-s="3"><div class="n">3</div><h3>듣는 모둠의 역할</h3><p>발표를 들으며 생각합니다.<br><br><b>“이 질문의 좋은 점은 무엇일까?”</b></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 leader -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">리더의 역할 · 20분</span></div><h2>그렇다면 10월 23일, 회장·부회장은 무엇을 해야 할까?</h2></div>
+    <div class="body">
+      <div class="leaderq step pop" data-s="1">친구들이 ‘좋은 질문’을 떠올릴 수 있도록<br>회장·부회장은 무엇을 해야 할까?</div>
+      <div class="leaderhint step" data-s="2">지금까지 여러분이 직접 질문을 만들고, 고르고, 다듬어 본 경험을 떠올려 보세요.<br><b>“열심히 한다”가 아니라 실제로 어떤 말을 하고, 어떤 행동을 할지</b> 구체적으로 적어봅니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 17 share -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="body">
+      <div class="activityHero">
+        <div class="time step pop" data-s="1">함께 나누기 · 15분</div>
+        <h3 class="step" data-s="2">좋은 질문이 나오게 하려면,<br><span class="em">리더는 어떻게 회의를 이끌어야 할까?</span></h3>
+        <p class="step" data-s="3">각 모둠의 생각을 들어보고, 비슷한 아이디어끼리 묶어봅시다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 six actions -->
+<section class="slide">
+  <div class="runhead">2026학년도 2학기 리더십 캠프</div>
+  <div class="inner">
+    <div class="head"><div><span class="pill">리더의 6가지 행동</span></div><h2>친구들의 생각이 나오게 만드는 방법</h2></div>
+    <div class="body">
+      <div class="six">
+        <div class="s step pop" data-s="1" data-n="1"><h3>질문 씨앗 던지기</h3><p>“불편한 점은 없었어?”<br>“더 좋아졌으면 하는 건?”</p></div>
+        <div class="s step pop" data-s="2" data-n="2"><h3>왜인지 묻기</h3><p>“왜 그렇게 생각했어?”<br>요구 뒤에 있는 이유를 꺼냅니다.</p></div>
+        <div class="s step pop" data-s="3" data-n="3"><h3>기다리기</h3><p>조용하다고 바로 대신 말하거나<br>결론 내리지 않습니다.</p></div>
+        <div class="s step pop" data-s="4" data-n="4"><h3>끌어들이기</h3><p>“다르게 생각하는 사람?”<br>“아직 이야기 안 한 사람은?”</p></div>
+        <div class="s step pop" data-s="5" data-n="5"><h3>묶기</h3><p>비슷한 생각과 질문을 연결해서<br>하나의 논의거리로 정리합니다.</p></div>
+        <div class="s step pop" data-s="6" data-n="6"><h3>선택하기</h3><p>어떤 질문을 함께 논의할지<br>구성원들이 고르게 합니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 19 closing -->
+<section class="slide closing">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="center">
+    <div class="kicker step" data-s="1">2026학년도 2학기 리더십 캠프</div>
+    <h2 class="step pop" data-s="2">좋은 리더는 좋은 질문이 나오기만을 기다리지 않습니다.<br><b>공동체가 함께 고민할 질문이 나오도록 이끕니다.</b></h2>
+    <div class="schoolend step" data-s="3">증산중학교 · 창의체험부</div>
+  </div>
+</section>
+
+</div></div></div>
+<div id="hud">1 / 19</div><div id="track"><div id="bar"></div></div><div id="help">←/→ 이동 · Space 다음 · F 전체화면 · O 목록 · 우클릭 이전</div><div id="ov"></div>
+<script>
+const stage=document.getElementById('stage');
+const slides=[...document.querySelectorAll('.slide')];
+const wrap=document.getElementById('wrap');
+const fitbox=document.getElementById('fitbox');
+let si=0,sc=0;
+function fit(){const w=wrap.clientWidth,h=wrap.clientHeight;if(!w||!h)return;const s=Math.min(w/1920,h/1080);stage.style.transform=`scale(${s})`;fitbox.style.width=(1920*s)+'px';fitbox.style.height=(1080*s)+'px';}
+addEventListener('resize',fit);addEventListener('orientationchange',fit);addEventListener('load',fit);if(window.visualViewport){visualViewport.addEventListener('resize',fit);visualViewport.addEventListener('scroll',fit)}if(window.ResizeObserver){new ResizeObserver(fit).observe(wrap)}document.addEventListener('fullscreenchange',()=>setTimeout(fit,50));if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit).catch(()=>{})}setTimeout(fit,120);fit();
+function steps(i){return [...slides[i].querySelectorAll('.step')].map(e=>+e.dataset.s||0).reduce((a,b)=>Math.max(a,b),0)}
+let lastSi=-1;
+function render(){
+  slides.forEach((s,i)=>{
+    s.classList.toggle('on',i===si);
+    s.classList.remove('focus-lens','focus-new','focus-challenge');
+    if(i!==si)s.classList.remove('slide-enter');
+  });
+  const active=slides[si];
+  if(lastSi!==si){
+    active.classList.remove('slide-enter');
+    void active.offsetWidth;
+    active.classList.add('slide-enter');
+    lastSi=si;
+  }
+  active.querySelectorAll('.step').forEach(e=>{
+    const n=(+e.dataset.s||0);
+    e.classList.toggle('show',n<=sc);
+    e.classList.toggle('current-step',n===sc && sc>0);
+  });
+  // 7번(통합 키워드) 마지막 질문 집중
+  if(active.querySelector('.keywordstage') && sc>=6) active.classList.add('focus-challenge');
+  // 방법 1~3: 사고 질문과 바꾼 질문에 순차 포커스
+  if(active.classList.contains('slide') && active.querySelector('.methodBody')){
+    if(sc===3) active.classList.add('focus-lens');
+    if(sc>=4) active.classList.add('focus-new');
+  }
+  document.getElementById('hud').textContent=(si+1)+' / '+slides.length;
+  const t=steps(si);document.getElementById('bar').style.width=((si+(t?sc/t:1))/slides.length*100)+'%'
+}
+function go(i,end=false){si=Math.max(0,Math.min(slides.length-1,i));sc=end?steps(si):0;render()}
+function next(){if(sc<steps(si)){sc++;render()}else if(si<slides.length-1)go(si+1,false)}
+function prev(){if(sc>0){sc--;render()}else if(si>0)go(si-1,true)}
+addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown','ArrowDown'].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','PageUp','ArrowUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home')go(0,false);else if(e.key==='End')go(slides.length-1,true);else if(e.key==='f'||e.key==='F'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen()}else if(e.key==='o'||e.key==='O')document.getElementById('ov').classList.toggle('on');else if(e.key==='Escape')document.getElementById('ov').classList.remove('on')});
+addEventListener('click',e=>{if(e.target.closest('#ov')||e.target.closest('a,button,input,textarea'))return;next()});addEventListener('contextmenu',e=>{e.preventDefault();prev()});
+const ov=document.getElementById('ov');ov.innerHTML='<h2>슬라이드 목록 <span style="color:#7D8AA4;font-size:15px;font-weight:500">· 클릭해서 이동</span></h2>'+slides.map((s,i)=>{const t=s.querySelector('h1,h2,h3');return `<div class="it" data-i="${i}"><span>${String(i+1).padStart(2,'0')}</span> &nbsp; ${(t?t.textContent.trim().replace(/\s+/g,' ').slice(0,72):'—')}</div>`}).join('');ov.addEventListener('click',e=>{const it=e.target.closest('.it');if(it){go(+it.dataset.i,false);ov.classList.remove('on')}});
+let idleT;function poke(){document.body.classList.remove('idle');clearTimeout(idleT);idleT=setTimeout(()=>document.body.classList.add('idle'),2600)}addEventListener('mousemove',poke);addEventListener('keydown',poke);poke();render();
+</script>
+</body>
+</html>
